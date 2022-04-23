@@ -54,13 +54,15 @@ const sumNums = (arr)=>{
 // Input: ['C#', 'JS', 'Ruby','Python'] 
 // Output: ['Python','Ruby','JS','C#']
 
-// const reverseArray = (arr)=>{
-//     let reversedArr= [];
-//     for(let i=arr.length -1 ;i=>0;i--){
-//         reversedArr.push(arr[i]);
-//     }
-// return reversedArr
-// }
-// -------------------------------------------------------------------------------------------------------
+
+const reverseArray = (arr)=>{
+    debugger
+       let reversedArr= [];
+       for(let i=1 ;i<=arr.length  ;i++){
+           reversedArr.push(arr[arr.length - i]);
+       }
+   return reversedArr
+   }
 
 module.exports = {findMax , sumNums};
+
