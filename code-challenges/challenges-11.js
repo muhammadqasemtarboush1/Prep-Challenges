@@ -130,7 +130,15 @@ function fullName(arr) {
 // -------------
 
 function gradesAvg(arr) {
-  // write your code here
+  let avgArray = arr.map((student) => {
+    let sum = 0;
+    for (let i = 0; i < student.gradsList.length; i++) {
+      sum += student.gradsList[i];
+    }
+    student.avg = sum / student.gradsList.length;
+    return student;
+  });
+  return avgArray;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -205,6 +213,17 @@ function gradesAvg(arr) {
 
 function studentsResult(arr) {
   // write your code here
+  let resultArray = arr.map((student) => {
+    if (student.avg >= 50) {
+      student.result = "Passed";
+    }
+    if (student.avg < 50) {
+      student.result = "Failed";
+    }
+    return student;
+  });
+  //   console.log(result);
+  return resultArray;
 }
 // -------------------------------------------------------------------------------------------------------
 
